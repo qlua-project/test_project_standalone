@@ -7,12 +7,13 @@ LUAROCKS QUICK START
 > luarocks init -h
 > luarocks init --lua-versions "5.4"
 
-When a config file is present in .luarocks, all packages were installed inside
-the project folder. Without it, flag should be used.
+NOTE: Project-local installs occur automatically if `./.luarocks/` exists.
+Otherwise, default system paths are used.
 
-Be aware: --local does not mean "local folder", this means "user's home
-directory". To really get a local installation, the --tree flag needs to be
-used.
+BEWARE: The "--local" flag does NOT mean "local project folder." It refers
+to the user's home directory tree (~/.luarocks).
+
+To really get a local installation, the --tree flag needs to be used.
 
 > luarocks install --tree=lua_modules inspect
 
